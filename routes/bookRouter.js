@@ -18,11 +18,11 @@ const routes = (Book) => {
     bookRouter.route('/books')
         .get(controller.get)
         .post(validator.body(bodySchema) (async (req, res) => {
-        const book = new book(req.body)
-        console.log('body:', req.body)
-        await book.save()
-        return res.status(201).json(book)
-     })
+            const book = new book(req.body)
+            console.log('body:', req.body)
+            await book.save()
+            return res.status(201).json(book)
+        })
 
      bookRouter.route('/books/:bookId')
      .get( async (req, res) => {

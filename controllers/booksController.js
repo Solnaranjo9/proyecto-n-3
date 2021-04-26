@@ -43,7 +43,7 @@ const booksController = () => {
         }
     }
 
-    const userObject -
+    const userObject =
     {
         firstName: body.firstName,
         lastName: body.lastName,
@@ -123,7 +123,7 @@ const booksController = () => {
              const foundUser = await User.findOne ({ 'userName' : req.body.userName});
          }
             
-             if(foundUser && foundUser.password == req.body.password){
+             if (foundUser && foundUser.password == req.body.password){
                     const tokenUser ={
                         firstName: foundUser.firstName,
                         lastName: foundUser.lastName,
